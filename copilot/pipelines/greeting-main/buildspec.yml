@@ -14,7 +14,7 @@ phases:
       - chmod +x ./copilot-linux
   build:
     commands:
-      - echo "Run your tests"
+      - echo "Run your tests (buildspec)"
       # - make test
   post_build:
     commands:
