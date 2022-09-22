@@ -53,7 +53,7 @@ copilot svc deploy --name myapp --env prod
 copilot pipeline init
 ```
 
-Select Workloads)
+Select Workloads.
 
 ```sh
 copilot pipeline deploy
