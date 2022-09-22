@@ -27,7 +27,12 @@ Continuing...
 ```sh
 git remote add origin git@github.com:CharlesBeatty/helloworld.git
 
-copilot app init  (select new application)
+copilot app init
+```
+
+Select New Application.
+
+```sh
 copilot svc init --name myapp
 ```
 
@@ -45,7 +50,12 @@ copilot env deploy --name prod
 copilot svc deploy --name myapp --env test
 copilot svc deploy --name myapp --env prod
 
-copilot pipeline init (select Workloads)
+copilot pipeline init
+```
+
+Select Workloads)
+
+```sh
 copilot pipeline deploy
 ```
 
