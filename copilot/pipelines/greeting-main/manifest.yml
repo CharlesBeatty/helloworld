@@ -30,8 +30,8 @@ stages:
     # test_commands: [echo 'running tests', make test]
     
         test_commands:
-        - echo "Starting tests"
-        - echo "Tests would have run"
+        - curl -i http://bonjo-publi-1cm64xgxivs7s-976865308.us-west-2.elb.amazonaws.com/ | grep "HTTP/1.1 200 OK"
+        - echo "Test ran successfully"
 
     - # The name of the environment.
         name: prod
