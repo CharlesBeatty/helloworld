@@ -28,7 +28,7 @@ stages:
     # requires_approval: true
     # Optional: use test commands to validate this stage of your build.
     # test_commands: [echo 'running tests', make test]
-	test_commands:
+    test_commands:
 		- curl --head bueno-Publi-2UC5JI71PHSZ-329202310.us-west-2.elb.amazonaws.com | grep "HTTP/1.1 200 OK"
 		- echo "Tests completed, site is running"
 		- echo "Load balancer DNS: " COPILOT_LB_DNS
