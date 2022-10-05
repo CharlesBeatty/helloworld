@@ -1,9 +1,9 @@
-# The manifest for the "ola-main" pipeline.
+# The manifest for the "bonjour-main" pipeline.
 # This YAML file defines your pipeline: the source repository it tracks and the order of the environments to deploy to.
 # For more info: https://aws.github.io/copilot-cli/docs/manifest/pipeline/
 
 # The name of the pipeline.
-name: ola-main
+name: bonjour-main
 
 # The version of the schema used in this template.
 version: 1
@@ -21,12 +21,18 @@ source:
     # connection_name: a-connection
 
 # This section defines the order of the environments your pipeline will deploy to.
-stages: 
-  - # By default all workloads are deployed concurrently within a stage.
+stages:
+  - # The name of the environment.
     name: test
-    test_commands:
-      - curl --head bueno-Publi-2UC5JI71PHSZ-329202310.us-west-2.elb.amazonaws.com | grep "HTTP/1.1 200 OK"
-      - echo Tests completed, site is running
-      - echo Load balancer DNS -- COPILOT_LB_DNS
-  -
+    # Optional: flag for manual approval action before deployment.
+    # requires_approval: true
+    # Optional: use test commands to validate this stage of your build.
+    # test_commands: [echo 'running tests', make test]
+
+  - # The name of the environment.
     name: prod
+    # Optional: flag for manual approval action before deployment.
+    # requires_approval: true
+    # Optional: use test commands to validate this stage of your build.
+    # test_commands: [echo 'running tests', make test]
+
