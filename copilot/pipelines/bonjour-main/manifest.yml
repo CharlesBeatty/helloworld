@@ -29,7 +29,7 @@ stages:
     # Optional: use test commands to validate this stage of your build.
     # test_commands: [echo 'running tests', make test]
     test_commands:
-      - curl --head http://bonjo-publi-13e8tceabgsit-1374184139.us-west-2.elb.amazonaws.com/ | grep "HTTP/1.1 200 OK"
+      - curl -s --head http://bonjo-Publi-13E8TCEABGSIT-1374184139.us-west-2.elb.amazonaws.com | grep "HTTP/1.1 200 OK"
       - echo Tests completed, site is running
       - echo Load balancer DNS is ${COPILOT_LB_DNS}
 
