@@ -30,7 +30,7 @@ stages:
     # test_commands: [echo 'running tests', make test]
     test_commands:
       - curl -s --head http://bonjo-Publi-13E8TCEABGSIT-1374184139.us-west-2.elb.amazonaws.com | grep "HTTP/1.1 200 OK"
-      - echo Tests completed, site is running
+      - echo Tests completed, site is running, now dumping environment
       - printenv
 
   - # The name of the environment.
