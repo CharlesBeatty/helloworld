@@ -31,7 +31,7 @@ stages:
     test_commands:
       - curl -s --head http://bonjo-Publi-13E8TCEABGSIT-1374184139.us-west-2.elb.amazonaws.com | grep "HTTP/1.1 200 OK"
       - echo Tests completed, site is running
-      - echo Load balancer DNS is ${COPILOT_LB_DNS}
+      - printenv
 
   - # The name of the environment.
     name: prod
