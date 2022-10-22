@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  
+  p A TCG / Hudsucker Production
+  
+  img(src='./images/weyland.jpg')
+  
+  p Names from the database:
+
+  ul
+    each row in names
+      li= row.name + ' has ID: ' + row.id

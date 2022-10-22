@@ -1,15 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
+const db  = require('./../db.js');
+
 var envName = process.env.COPILOT_ENVIRONMENT_NAME;
 if (envName === undefined) {
     envName = 'Local';
 }
 var title = 'ENV: ' + envName;
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: title });
-});
+  db.pool.query('SELECT * FROM public.my_table')
+    .then(names => {
+        res.render('names', { title: title, names: names.rows });
+    })
+})
 
 module.exports = router;

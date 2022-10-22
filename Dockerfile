@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:19.0-bullseye
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -9,6 +9,9 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm install
+
+# Install node-postgres 
+RUN npm install pg
 
 # If you are building your code for production
 # RUN npm ci
