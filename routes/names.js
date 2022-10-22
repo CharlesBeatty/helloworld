@@ -5,7 +5,7 @@ const db  = require('./../db.js');
 
 var envName = process.env.COPILOT_ENVIRONMENT_NAME;
 if (envName === undefined) {
-    envName = 'Local';
+    envName = 'local';
 }
 var title = 'ENV: ' + envName;
 
