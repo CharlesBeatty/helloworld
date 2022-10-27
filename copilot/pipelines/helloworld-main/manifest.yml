@@ -28,4 +28,6 @@ stages:
     # requires_approval: true
     # Optional: use test commands to validate this stage of your build.
     # test_commands: [echo 'running tests', make test]
-
+    test_commands:
+      - curl --head greet-publi-8726by8mssw5-1919284251.us-east-1.elb.amazonaws.com | grep "HTTP/1.1 200 OK"
+      - echo Tests completed, site is running
