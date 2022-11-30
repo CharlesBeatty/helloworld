@@ -5,7 +5,7 @@ const pool = new Pool({
   database: 'my_db',
   password: 'password',
   port: 5432,
-  host: 'database.test.greeting.local'   // from AWS VPC network
+  host: 'db.test.greeting.local'   // from AWS VPC network
   //host: '172.17.0.2'   // from local Docker network
 })
 
