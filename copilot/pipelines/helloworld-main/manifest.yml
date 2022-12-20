@@ -1,9 +1,9 @@
-# The manifest for the "hello-main" pipeline.
+# The manifest for the "helloworld-main" pipeline.
 # This YAML file defines your pipeline: the source repository it tracks and the order of the environments to deploy to.
 # For more info: https://aws.github.io/copilot-cli/docs/manifest/pipeline/
 
 # The name of the pipeline.
-name: hello-main
+name: helloworld-main
 
 # The version of the schema used in this template.
 version: 1
@@ -28,6 +28,4 @@ stages:
     # requires_approval: true
     # Optional: use test commands to validate this stage of your build.
     # test_commands: [echo 'running tests', make test]
-    test_commands:
-      - curl --head greet-Publi-1PWK90I2OIYKT-1270328022.us-east-1.elb.amazonaws.com | grep "HTTP/1.1 200 OK"
-      - echo Tests completed, site is running
+
