@@ -1,12 +1,5 @@
 # Buildspec runs in the build stage of your pipeline.
 version: 0.2
-
-env:
-  #secrets-manager:
-    # SECRET_VALUE: "arn:aws:secretsmanager:us-east-1:096379746282:secret:dockerhub-ifHQ0x"
-    DOCKERHUB_PASS: "/docker/password"
-    DOCKERHUB_USERNAME: "/docker/username"
-    
 phases:
   install:
     runtime-versions:
